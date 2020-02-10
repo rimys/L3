@@ -13,26 +13,41 @@ for i in range(len(txt1)):
 
 #_------------- формируем list со словами
 list_txt = nocomma.split()
-#print(type(list_txt))
+#print(list_txt)
 # ------------- приводим к нижнему регистру
 #list_txt = map(list_txt.lower, )
 lower_text = []
 
 ######################## верно:
 for s in range(len(list_txt)):
-    lower_text[s] = list_txt[s].lower()
+     lower_text.append(list_txt[s].lower())
 
 ########################
 
 #lower_text = map(str, list_txt[:])
-#print(type(lower_text))
+# print(lower_text)
 
 
 # -------------- словарь с ключами - словами, значения - кол-во
+# ----- просто словарь из листа
+# dict_txt = {}
+# for i in range(len(lower_text)):
+#     dict_txt [i] = lower_text[i]
+# print(dict_txt)
+
+# ----- задача
+
+
 dict_txt = {}
 for i in range(len(lower_text)):
-    dict_txt [i] = lower_text[i]
+     dict_txt[lower_text[i]] = lower_text.count(lower_text[i])
 print(dict_txt)
+
+# ------------- 5 наиболее встречающихся слов, количество разных слов
+
+
+
+
 
 
 
